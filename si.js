@@ -7,8 +7,10 @@ var request = require('request');
 
 var source = process.argv[2];
 
-var tagName = process.argv[3] == '--img' ? 'img' : 'a';
-console.log('Mode: ' + tagName);
+//var tagName = process.argv[3] == '--img' ? 'img' : 'a';
+//console.log('Mode: ' + tagName);
+var tagName = 'a';
+
 var timestamp = Math.round(new Date().getTime() / 1000);
 
 var imageDir = './images';
@@ -43,9 +45,11 @@ var createDestinationDir = function(callback){
 //get parser ready
 var parser = new htmlparser.Parser({
     onopentag: function(name, attribs){
+    	//console.log('Tag checked: ' + name);
         if(name === tagName){
-        	var name = tagName == 'a' ? attribs.href : attribs.src;
-        	console.log(name);
+        	//var name = tagName == 'a' ? attribs.href : attribs.src;
+        	//console.log(name);
+        	name = attribs.href;
         	var url = source + name;
         	var ext = path.extname(attribs.href).toLowerCase();
             if(ext === '.jpg' || ext === '.jpeg' || ext == '.gif' || ext == '.png'){
