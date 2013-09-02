@@ -1,0 +1,13 @@
+{
+  "name": "steal-images",
+  "version": "1.0.0",
+  "main":  "si.js",
+  "scripts": {
+    "test": "echo \"Error: np test specified\" && exit 1"
+  },
+  "dependencies": {
+  	"htmlparser2": "3.2.*"
+  },
+  "author": "nagyfej",
+  "license": "WTFPL"
+}
