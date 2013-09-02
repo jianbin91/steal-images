@@ -9,6 +9,7 @@ Later I will add img tag support and clean up the code, it's a little messy righ
 ## Usage
 
 Simply call from command line with an URL parameter:
+
 $ node si.js http://sample.com/images/
 
 By the way, don't be a dick, only download images you have the permissions for :)
