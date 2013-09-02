@@ -6,7 +6,9 @@
     "test": "echo \"Error: np test specified\" && exit 1"
   },
   "dependencies": {
-  	"htmlparser2": "3.2.*"
+  	"htmlparser2": "3.2.*",
+  	"async": "latest",
+  	"request": "latest"
   },
   "author": "nagyfej",
   "license": "WTFPL"
